@@ -10,7 +10,7 @@
       name: wireshark
       state: removed
 
-- name: update LB and db servers
+- name: update LB and server
   hosts: lb, db
   remote_user: ubuntu
   become: yes
@@ -22,4 +22,3 @@
       state: absent
       autoremove: yes
       purge: yes
-      autoclean: yes

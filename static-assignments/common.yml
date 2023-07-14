@@ -5,8 +5,8 @@
   become: yes
   become_user: root
   tasks:
-    - name: ensure wireshark is at the latest version
-      yum:
+   - name: ensure wireshark is at the latest version
+     yum:
         name: wireshark
         state: latest
 
@@ -43,3 +43,4 @@
     - name: set timezone
       timezone:
           name: Africa/Lagos
+          
