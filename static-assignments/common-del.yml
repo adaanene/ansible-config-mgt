@@ -22,5 +22,3 @@
       state: absent
       autoremove: yes
       purge: yes
-      autoclean: yes
-      
