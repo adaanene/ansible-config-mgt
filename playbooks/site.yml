@@ -16,4 +16,4 @@
 #   when: load_balancer_is_required 
 
 - name: Include dynamic variables
-  import_playbook: ../static-assignments/common.yml
+  import_playbook: ../static-assignments/common-del.yml
