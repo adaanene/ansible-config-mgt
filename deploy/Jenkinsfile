@@ -26,5 +26,13 @@ pipeline {
         }
       }
     }
+
+    stage('Trial') {
+      steps {
+        script {
+          sh 'echo "Trial Stage"'
+        }
+      }
+    }
 }   
 
