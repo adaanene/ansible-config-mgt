@@ -30,7 +30,7 @@ Scope: refactor code in ansible-config-mgt, create roles for web servers and imp
 
 5. Test your configuration (click on `Build now` or commit changes) and make sure that files are saved into ansible-config-artifact target directory
 
-    ![buil](./screenshots_12/build.png)
+    ![build](../screenshots/screenshots_12/build.png)
 
 6. Create a new branch named **refactor** and pull down the latest changes from the **main** branch
 

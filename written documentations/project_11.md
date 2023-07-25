@@ -101,7 +101,7 @@ Scope: configure a Jump server and create an Ansible playbook to automate server
 
     `Comments` the db server was put at the beginning of the playbook, with nfs and webservers as if it was running on RHEL8 but it was actually running on Ubuntu so the user should have been `ubuntu`. Running the playbook with db server misplaced gave me an error so I made the appropriate changes to teh playbook
 
-    ![error](./screenshots_11/playbook_error.png)
+    ![error](../screenshots/screenshots_11/playbook_error.png)
 
 14. Push all changes to your branch, to GitHub
 
@@ -127,10 +127,11 @@ Scope: configure a Jump server and create an Ansible playbook to automate server
     cd ansible-config-mgt
     ansible-playbook -i inventory/dev.yml playbooks/common.yml
     ```
-    ![ok](./screenshots_11/run_ok.png)
+    ![ok](../screenshots/screenshots_11/run_ok.png)
 
     Confirm that wireshark was installed on remote servers, and the timezone was changed
 
-    ![wireshark_installed](./screenshots_11/wireshark_version.png)
+    ![wireshark_installed](../screenshots/screenshots_11/wireshark_version.png)
 
-    ![timezone](./screenshots_11/timezone.png)
+
+    ![timezome](../screenshots/screenshots_11/timezone.png)
