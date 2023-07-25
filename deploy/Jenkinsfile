@@ -17,7 +17,7 @@ pipeline {
         }
       }
     }
-    }
+    
 
     stage('Checking') {
       steps {
@@ -26,5 +26,5 @@ pipeline {
         }
       }
     }
-}   
-
+  }   
+}
