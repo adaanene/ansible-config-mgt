@@ -14,3 +14,6 @@
 # #- hosts: lb
 #   import_playbook: ../static-assignments/loadbalancer.yml
 #   when: load_balancer_is_required 
+
+- name: Include dynamic variables
+  import_playbook: ../static-assignments/common.yml
