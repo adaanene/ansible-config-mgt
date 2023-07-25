@@ -17,20 +17,28 @@ pipeline {
         }
       }
     }
-    }
+  }
 
-    stage('Checking') {
+    stage('Package') {
       steps {
         script {
-          sh 'echo "Checking Stage"'
+          sh 'echo "Packaging Stage"'
         }
       }
     }
 
-    stage('Trial') {
+    stage('Deploy') {
       steps {
         script {
-          sh 'echo "Trial Stage"'
+          sh 'echo "Deploy Stage"'
+        }
+      }
+    }
+
+    stage('Clean up') {
+      steps {
+        script {
+          sh 'echo "Clean up Stage"'
         }
       }
     }
