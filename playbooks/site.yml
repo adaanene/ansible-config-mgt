@@ -1,4 +1,16 @@
 ---
+- hosts: nginx
+- name: nginx assignment
+  roles:
+  - role: nginx
+    become: true
+
+- hosts: db
+- name: database assignment
+  roles:
+  - role: mysql
+    become: true
+    
 # - name: Include dynamic variables
 # #- hosts: all
 #   import_playbook: ../static-assignments/common.yml  
@@ -14,15 +26,3 @@
 # #- hosts: lb
 #   import_playbook: ../static-assignments/loadbalancer.yml
 
-- hosts: nginx
-- name: nginx assignment
-  roles:
-     - nginx
-  become: true
-
-
-- hosts: db
-- name: database assignment
-  roles:
-     - mysql
-  become: true
