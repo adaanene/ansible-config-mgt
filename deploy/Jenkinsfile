@@ -1,11 +1,10 @@
 pipeline {
     agent any
 
-    parameters {
-      string(name: 'inventory', defaultValue: 'dev',  description: 'This is the inventory file for the environment to deploy configuration')
+    // parameters {
+    //   string(name: 'inventory', defaultValue: 'dev',  description: 'This is the inventory file for the environment to deploy configuration')
     
-    }
-
+    // }
 
   stages {
   
@@ -16,15 +15,54 @@ pipeline {
       }
     }
   }
-    stage('SCM Checkout') {
+    // stage('SCM Checkout') {
+    //   steps {
+    //      git branch: 'main', url: 'https://github.com/adaanene/ansible-config-mgt.git'
+    //   }
+    // }
+    
+    // stage('Execute Ansible') {
+    //   steps {
+    //      ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: '${inventory}', playbook: 'playbooks/site.yml'
+    //   }
+    // }
+
+    stage('Build') {
       steps {
-         git branch: 'main', url: 'https://github.com/adaanene/ansible-config-mgt.git'
+        script {
+          sh 'echo "Building Stage"'
+        }
+      }
+    }
+
+    stage('Test') {
+      steps {
+        script {
+          sh 'echo "Testing Stage"'
+        }
       }
     }
     
-    stage('Execute Ansible') {
+
+    stage('Package') {
       steps {
-         ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: '${inventory}', playbook: 'playbooks/site.yml'
+        script {
+          sh 'echo "Packagin App"'
+        }
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        script {
+          sh 'echo "Deploy to Dev"'
+        }
+      }
+    }
+
+    stage('Cleanup') {
+      steps {
+        cleanWs()
       }
     }
   }
