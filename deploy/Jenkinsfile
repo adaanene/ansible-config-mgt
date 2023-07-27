@@ -3,9 +3,19 @@ pipeline {
 
     parameters {
       string(name: 'inventory', defaultValue: 'dev',  description: 'This is the inventory file for the environment to deploy configuration')
+    
     }
 
+
   stages {
+  
+  stage('Initial cleanup') {
+    steps {
+      dir("$WORKSPACE") {
+        deleteDir()
+      }
+    }
+  }
     stage('SCM Checkout') {
       steps {
          git branch: 'main', url: 'https://github.com/adaanene/ansible-config-mgt.git'

@@ -5,7 +5,7 @@
   include: ../dynamic-assignments/env-vars.yml
   tags:
        - always
-
+       
 - name: Webserver assignment
 #- hosts: webservers
   import_playbook: ../static-assignments/uat-webservers.yml
