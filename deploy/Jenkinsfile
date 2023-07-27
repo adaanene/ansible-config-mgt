@@ -2,29 +2,21 @@ pipeline {
     agent any
 
   stages {
-    stage('Build') {
+    stage('SCM Checkout') {
       steps {
-        script {
-          sh 'echo "Building Stage"'
-        }
-      }
-    }
-
-    stage('Test') {
-      steps {
-        script {
-          sh 'echo "Testing Stage"'
-        }
+         git branch: 'main', url: 'https://github.com/adaanene/ansible-config-mgt.git'
       }
     }
     
-
-    stage('Checking') {
+    stage('Execute Ansible') {
       steps {
-        script {
-          sh 'echo "Checking Stage"'
-        }
+         ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory/dev.yml', playbook: 'playbooks/site.yml'
       }
+    }
+
+
+    parameters {
+      string(name: 'inventory', defaultValue: 'dev',  description: 'This is the inventory file for the environment to deploy configuration')
     }
 }
 }   
