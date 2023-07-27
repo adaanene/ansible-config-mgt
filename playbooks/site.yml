@@ -5,6 +5,7 @@
   - role: nginx
     become: true
 
+    
 - hosts: db
 - name: database assignment
   roles:
