@@ -1,29 +1,9 @@
 ---
-- hosts: nginx
 - name: nginx assignment
-  roles:
-  - role: nginx
-    become: true
+  import_playbook: ../static-assignments/nginx.yml
 
-    
-- hosts: db
-- name: database assignment
-  roles:
-  - role: mysql
-    become: true
-    
-# - name: Include dynamic variables
-# #- hosts: all
-#   import_playbook: ../static-assignments/common.yml  
-#   include: ../dynamic-assignments/env-vars.yml
-#   tags:
-#        - always
-       
-# - name: Webserver assignment
-# #- hosts: webservers
-#   import_playbook: ../static-assignments/uat-webservers.yml
 
-# - name: Loadbalancers assignment
-# #- hosts: lb
-#   import_playbook: ../static-assignments/loadbalancer.yml
+# - hosts: db
+# - name: database assignment
+#   import_playbook: ../static-assignments/database.yml
 
