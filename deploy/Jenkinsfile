@@ -22,24 +22,24 @@ pipeline {
   }
 
   
-    // stage('SCM Checkout') {
-    //   steps {
-    //      git branch: 'feature/jenkinsfile-testing', url: 'https://github.com/adaanene/ansible-config-mgt.git'
-    //   }
-    // }
+    stage('SCM Checkout') {
+      steps {
+         git branch: 'feature/jenkinsfile-testing', url: 'https://github.com/adaanene/ansible-config-mgt.git'
+      }
+    }
 
-    // stage('Prepare Ansible For Execution') {
-    //   steps {
-    //     sh 'echo ${WORKSPACE}'
-    //     sh 'sed -i "3 a roles_path=${WORKSPACE}/roles" ${WORKSPACE}/deploy/ansible.cfg'
-    //   }
-    // }
+    stage('Prepare Ansible For Execution') {
+      steps {
+        sh 'echo ${WORKSPACE}'
+        sh 'sed -i "3 a roles_path=${WORKSPACE}/roles" ${WORKSPACE}/deploy/ansible.cfg'
+      }
+    }
     
-    //   stage('Execute Ansible Playbook') {
-    //   steps {
-    //      ansiblePlaybook become: true, credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory/dev.yml', playbook: 'playbooks/site.yml'
-    //   }
-    // }
+      stage('Execute Ansible Playbook') {
+      steps {
+         ansiblePlaybook become: true, credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory/dev.yml', playbook: 'playbooks/site.yml'
+      }
+    }
 
     stage('Cleanup') {
       steps {
