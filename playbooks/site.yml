@@ -2,6 +2,7 @@
 - name: nginx assignment
   import_playbook: ../static-assignments/nginx.yml
 
+
 # - name: database assignment
 #   import_playbook: ../static-assignments/database.yml
 
