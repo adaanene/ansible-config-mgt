@@ -1,4 +1,4 @@
 - hosts: db
   become: true
   roles:
-    - /var/lib/jenkins/workspace/_mgt_feature_jenkinsfile-testing/roles/mysql
+    - /var/lib/jenkins/workspace/ansible-config-mgt_main/roles/mysql
