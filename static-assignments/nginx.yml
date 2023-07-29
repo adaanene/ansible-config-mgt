@@ -2,5 +2,7 @@
 - hosts: nginx
   become: true
   roles:
-    - role: /home/ec2-user/ansible-config-mgt/roles/nginx
+     - /var/lib/jenkins/workspace/ansible-config-mgt_main/roles/mysql
+
+    #- /var/lib/jenkins/workspace/ansible-config-mgt_main/roles/nginx
   
