@@ -1,0 +1,6 @@
+---
+- hosts: nginx
+  become: true
+  roles:
+    - /var/lib/jenkins/workspace/_mgt_feature_jenkinsfile-testing/roles/nginx
+  

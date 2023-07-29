@@ -116,7 +116,7 @@ mysql_databases:
 mysql_users: 
    - name: webaccess
      host: "%"
-     password: password
+     password: secret
      priv: "tooling.*:ALL"
 
 mysql_disable_log_bin: false
