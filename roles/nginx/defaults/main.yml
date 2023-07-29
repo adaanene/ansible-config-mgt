@@ -83,7 +83,7 @@ nginx_upstreams:
    strategy: "ip_hash" 
    keepalive: 16 
    servers:
-     - "172.31.38.83"
+     - "172.31.46.186"
     
 # enable_nginx_lb: true
 # load_balancer_is_required: true
