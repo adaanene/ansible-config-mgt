@@ -2,5 +2,7 @@
 - hosts: nginx
   become: true
   roles:
-    - /var/lib/jenkins/workspace/_mgt_feature_jenkinsfile-testing/roles/nginx
+    - /home/ec2-user/ansible-config-mgt/roles/nginx
+   
+   # - /var/lib/jenkins/workspace/_mgt_feature_jenkinsfile-testing/roles/nginx
   
