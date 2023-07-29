@@ -2,4 +2,4 @@
 - hosts: nginx
   become: true
   roles:
-    - role: '/home/ec2-user/ansible-config-mgt/roles/nginx'
+    - role: ../ansible-config-mgt/roles/nginx
