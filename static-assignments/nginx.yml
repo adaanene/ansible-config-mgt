@@ -2,4 +2,4 @@
 - hosts: nginx
   become: true
   roles:
-    - "{{ lookup('ansible.builtin.env', 'WORKSPACE') }}/roles/nginx"
+    - "{{ lookup('ansible.builtin.env', 'WORKSPACE/roles/nginx') }}"
