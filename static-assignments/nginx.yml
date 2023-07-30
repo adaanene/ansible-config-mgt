@@ -2,4 +2,4 @@
 - hosts: nginx
   become: true
   roles:
-    - "{{ lookup('env','WORKSPACE') }}/roles/nginx"
+    - role: "{{ lookup('env','WORKSPACE') }}/roles/nginx"
