@@ -1,8 +1,9 @@
 ---
-- hosts: nginx
-  become: true
-  roles:
-     - /var/lib/jenkins/workspace/ansible-config-mgt_main/roles/nginx
 
-   
+- hosts: nginx
+  roles:
+    - role: "{{ lookup('env','WORKSPACE') }}/roles/nginx"
+  become: true
+
+#"{{ lookup('env','WORKSPACE') }}/roles/nginx"
   
