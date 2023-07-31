@@ -2,4 +2,4 @@
 - hosts: db
   become: true
   roles:
-    - "{{ lookup('env','WORKSPACE') }}/roles/mysql"
+    - role: "{{ lookup('env','WORKSPACE') }}/roles/mysql"
