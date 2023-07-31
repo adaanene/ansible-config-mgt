@@ -24,7 +24,7 @@ pipeline {
   
     stage('SCM Checkout') {
       steps {
-         git branch: 'feature/jenkinsfile-testing', url: 'https://github.com/adaanene/ansible-config-mgt.git'
+         git branch: 'feature/jenkinsfilepipeline', url: 'https://github.com/adaanene/ansible-config-mgt.git'
       }
     }
 
