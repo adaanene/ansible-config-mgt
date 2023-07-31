@@ -4,6 +4,3 @@
   roles:
     - role: "{{ lookup('env','WORKSPACE') }}/roles/nginx"
   become: true
-
-#"{{ lookup('env','WORKSPACE') }}/roles/nginx"
-  
