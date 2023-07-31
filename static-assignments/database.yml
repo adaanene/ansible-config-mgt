@@ -1,4 +1,5 @@
+---
 - hosts: db
   become: true
   roles:
-    - /var/lib/jenkins/workspace/ansible-config-mgt_main/roles/mysql
+    - "{{ lookup('env','WORKSPACE') }}/roles/mysql"
