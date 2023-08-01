@@ -1,0 +1,11 @@
+- name: Play for artifactory_servers
+  hosts: artifactory
+  collections:
+    - community.general
+  serial:
+    - 1
+    - 100%
+  roles:
+    - role: artifactory
+      when: artifactory_enabled | bool
+  become: yes
