@@ -24,7 +24,7 @@ pipeline {
   
     stage('SCM Checkout') {
       steps {
-         git branch: 'feature/prj14-jenkinsfilepipeline', url: 'https://github.com/adaanene/ansible-config-mgt.git'
+         git branch: 'main', url: 'https://github.com/adaanene/ansible-config-mgt.git'
       }
     }
 
