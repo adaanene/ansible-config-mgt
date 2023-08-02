@@ -112,12 +112,24 @@ mysql_databases:
     encoding: utf8
     replicate: 1
 
+mysql_databases: 
+  - name: homestead
+    collation: utf8_general_ci
+    encoding: utf8
+    replicate: 1
+
 # Users.
 mysql_users: 
    - name: webaccess
      host: "%"
      password: secret
-     priv: "tooling.*:ALL"
+     priv: "tooling.*:ALL,GRANT"
+
+mysql_users: 
+   - name: homestead
+     host: 172.31.4.109
+     password: sePret^i
+     priv: "*.*:ALL,GRANT"
 
 mysql_disable_log_bin: false
 
