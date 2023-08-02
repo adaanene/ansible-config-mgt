@@ -1,8 +1,0 @@
----
-
-- hosts: artifactory
-  collections:
-      - jfrog.platform 
-  roles:
-      - artifactory
-  become: yes
