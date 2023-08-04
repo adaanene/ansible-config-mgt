@@ -1,11 +1,11 @@
 ---
 - hosts: sonarqube
-    tasks:
+  tasks:
       - name: Install package dependencies.
         package:
           name: "{{ item }}"
           state: "present"
         with_items:
           - unzip
-    roles:
+  roles:
     - role: "{{ lookup('env','WORKSPACE') }}/roles/sonarqube.yml"
