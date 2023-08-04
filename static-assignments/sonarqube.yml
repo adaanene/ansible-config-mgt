@@ -1,6 +1,6 @@
 ---
 - hosts: sonarqube
-    pre_tasks:
+    tasks:
       - name: Install package dependencies.
         package:
           name: "{{ item }}"
