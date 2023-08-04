@@ -8,4 +8,4 @@
         with_items:
           - unzip
   roles:
-    - role: "{{ lookup('env','WORKSPACE') }}/roles/sonarqube.yml"
+    - "{{ lookup('env','WORKSPACE') }}/roles/sonarqube.yml"
