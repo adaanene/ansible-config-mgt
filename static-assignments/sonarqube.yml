@@ -8,4 +8,4 @@
         with_items:
           - unzip
   roles:
-    - "{{ lookup('env','WORKSPACE') }}/roles/sonarqube.yml"
+    - /home/ec2-user/ansible-config-mgt/static-assignments/sonarqube.yml
