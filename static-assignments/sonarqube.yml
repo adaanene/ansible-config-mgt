@@ -1,13 +1,7 @@
 ---
+
 - hosts: sonarqube
   become: yes
-  tasks:
-      - name: Install package dependencies.
-        package:
-          name: "{{ item }}"
-          state: "present"
-        with_items:
-          - unzip
   roles:
     - /home/ec2-user/ansible-config-mgt/roles/sonarqube
     
