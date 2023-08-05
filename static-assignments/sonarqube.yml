@@ -3,5 +3,5 @@
 - hosts: sonarqube
   become: yes
   roles:
-    - /home/ec2-user/ansible-config-mgt/roles/sonarqube
+    - role: "{{ lookup('env','WORKSPACE') }}/roles/sonarqube"
     
