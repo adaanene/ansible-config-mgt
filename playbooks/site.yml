@@ -1,13 +1,13 @@
 ---
-# - name: nginx assignment
-#   import_playbook: ../static-assignments/nginx.yml
+- name: nginx assignment
+  import_playbook: ../static-assignments/nginx.yml
 
 
-# - name: database assignment
-#   import_playbook: ../static-assignments/database.yml
+- name: database assignment
+  import_playbook: ../static-assignments/database.yml
 
-# - name: Deploy todo application
-#   import_playbook: ../static-assignments/deployment.yml
+- name: Deploy todo application
+  import_playbook: ../static-assignments/deployment.yml
 
 - name: install sonarqube 
   import_playbook: ../static-assignments/sonarqube.yml
