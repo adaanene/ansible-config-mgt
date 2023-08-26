@@ -1,0 +1,7 @@
+---
+
+- hosts: sonarqube
+  become: yes
+  roles:
+    - role: "{{ lookup('env','WORKSPACE') }}/roles/sonarqube"
+    
