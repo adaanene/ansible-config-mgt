@@ -30,17 +30,15 @@
 
     ```
     ---
-    - hosts: all
-    - name: Include dynamic variables 
-    tasks:
-    import_playbook: ../static-assignments/common.yml 
-    include: ../dynamic-assignments/env-vars.yml
-    tags:
-        - always
+     - name: Include dynamic variables 
+       tasks:
+        - import_playbook: ../static-assignments/common.yml 
+        - include: ../dynamic-assignments/env-vars.yml
+          tags:
+            - always
 
-    -  hosts: webservers
     - name: Webserver assignment
-    import_playbook: ../static-assignments/webservers.yml
+      import_playbook: ../static-assignments/webservers.yml
     ```
 
 
@@ -105,12 +103,11 @@
     ```
 
 
-8. Update `site.yml` inside the playbooks folder
+8. Add this to `site.yml` inside the playbooks folder
 
     ```
     - name: Loadbalancers assignment
-      hosts: lb
-         - import_playbook: ../static-assignments/loadbalancers.yml
+      import_playbook: ../static-assignments/loadbalancers.yml
       when: load_balancer_is_required 
     ```
 
