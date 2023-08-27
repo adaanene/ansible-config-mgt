@@ -7,20 +7,20 @@
         ```
         ---
         - name: collate variables from env specific file, if it exists
-        hosts: all
-        tasks:
+          hosts: all
+          tasks:
             - name: looping through list of available files
-            include_vars: "{{ item }}"
-            with_first_found:
-                - files:
-                    - dev.yml
-                    - stage.yml
-                    - prod.yml
-                    - uat.yml
-                paths:
-                    - "{{ playbook_dir }}/../env-vars"
-            tags:
-                - always
+              include_vars: "{{ item }}"
+              with_first_found:
+                    - files:
+                        - dev.yml
+                        - stage.yml
+                        - prod.yml
+                        - uat.yml
+                      paths:
+                        - "{{ playbook_dir }}/../env-vars"
+              tags:
+                 - always
         ```
 
     - create a folder called **env-vars** and inside it create yaml files for each environments so `dev.yml, stage.yml, prod.yml, uat.yml `.
