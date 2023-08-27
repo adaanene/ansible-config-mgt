@@ -42,7 +42,7 @@
     ```
 
 
-3. On `Jenkins-Ansible` server install git if it is not already installed and run these codes:
+3. In `Jenkins-Ansible` server install git if it is not already installed and run these codes:
 
         ```
         git init
@@ -53,7 +53,7 @@
         ```
 
 
-4. Switch to **roles** directory and download [MySQL role by geerlingguy](https://galaxy.ansible.com/geerlingguy/mysql) then it to `mysql`.
+4. Switch to **roles** directory and download [MySQL role by geerlingguy](https://galaxy.ansible.com/geerlingguy/mysql) then rename it to `mysql`.
 
     - Edit roles configuration to use correct credentials for MySQL required for the tooling website
 
