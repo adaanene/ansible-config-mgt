@@ -93,7 +93,7 @@
     Do the same for Nginx but remember to change the variable name to `enable_nginx_role`.
 
 
-7. Update **static-assignments** with a new `load-balancers.yml` file to reflect the new roles
+7. Update **static-assignments** with a new `loadbalancer.yml` file to reflect the new roles
 
     ```
     - hosts: lb
